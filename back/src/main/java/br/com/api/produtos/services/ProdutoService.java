@@ -32,4 +32,10 @@ public class ProdutoService {
             }
         }
     }
+
+    public ResponseEntity<RespostaModel> deletarProduto(long codigo){
+        pr.deleteById(codigo);
+        rm.setMensagem("O produto foi excluído com sucesso!");
+        return new ResponseEntity<RespostaModel>(rm, HttpStatus.OK);        
+    }
 }
