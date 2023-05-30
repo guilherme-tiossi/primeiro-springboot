@@ -1,4 +1,4 @@
-function Tabela(){
+function Tabela({array}){
     return(
         <table>
             <thead>
@@ -11,6 +11,16 @@ function Tabela(){
             </thead>
 
             <tbody>
+                {
+                    array.map((obj, index) => (
+                        <tr key={index}>
+                            <td>{obj.codigo}</td>
+                            <td>{obj.nome}</td>
+                            <td>{obj.preco}</td>
+                            <td><button> Selecionar </button></td>
+                        </tr>
+                    ))
+                }
                 <tr>
                     <td></td>
                     <td></td>

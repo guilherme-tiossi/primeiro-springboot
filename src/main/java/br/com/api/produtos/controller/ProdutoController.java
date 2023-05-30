@@ -14,7 +14,7 @@ import br.com.api.produtos.model.ProdutoModel;
 import br.com.api.produtos.services.ProdutoService;
 
 @RestController
-@CrossOrigin(origins = "http/localhost:3000")
+@CrossOrigin(origins = "*")
 public class ProdutoController {
     
     @Autowired
