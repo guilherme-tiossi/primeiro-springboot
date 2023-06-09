@@ -1,4 +1,4 @@
-function Tabela({array}){
+function Tabela({array, selecionar}){
     return(
         <table>
             <thead>
@@ -17,7 +17,7 @@ function Tabela({array}){
                             <td>{obj.codigo}</td>
                             <td>{obj.nome}</td>
                             <td>{obj.preco}</td>
-                            <td><button> Selecionar </button></td>
+                            <td><button onClick={() => {selecionar(index)}}> Selecionar </button></td>
                         </tr>
                     ))
                 }
