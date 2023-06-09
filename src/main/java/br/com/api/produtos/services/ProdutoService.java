@@ -21,7 +21,7 @@ public class ProdutoService {
     }
 
     public ResponseEntity<?> cadastrarAlterarProduto(ProdutoModel pm, String acao){
-        if(pm.getNome().equals("") || pm.getPreco() < 0){
+        if(pm.getNome().equals("") || pm.getPreco() <= 0){
             rm.setMensagem("Ambos os campos de nome e de produto devem estar preenchidos");
             return new ResponseEntity<RespostaModel>(rm, HttpStatus.BAD_REQUEST);
         } else {
